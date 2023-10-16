@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% include 'header.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail information</title>
+</head>
+<body>
+    <h1 class="text-center">{{book_key.title}}</h1>
+    <div class="row">
+        <div class="col-5 gy-5">
+            <img src="{{book_key.image.url}}">
+            <p>Price: {{book_key.cost}}</p>
+            <p>{{book_key.actuality}}</p>
+        </div>
+        <div class="col-6 gy-5">
+            <p>{{book_key.description}}</p>
+            <iframe src="{{book_key.video}}" frameborder="0" width="400" height="200"></iframe>
+            <p>{{book_key.created_date}}</p>
+        </div>
+    </div>
+</body>
+{% include 'footer.html' %}
+</html>
