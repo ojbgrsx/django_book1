@@ -10,13 +10,13 @@
 <div class="flex">
  {% for i in book_key %}
     <div class="card" style="width: 18rem;">
-      <a href="/book_details/{{i.id}}/">
+      <a href="/book_detail/{{i.id}}/">
           <img src="{{i.image.url}}" class="card-img-top" alt="...">
       </a>
       <div class="card-body">
         <h5 class="card-title">{{i.title}}</h5>
         <p class="card-text">{{i.description}}</p>
-        <a href="/book_details/{{i.id}}/" class="btn btn-primary">More about the book</a>
+        <a href="/book_detail/{{i.id}}/" class="btn btn-primary">More about the book</a>
       </div>
     </div>
    {% endfor %}
