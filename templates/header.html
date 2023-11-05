@@ -32,6 +32,9 @@
           </ul>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="/register/">Create an account</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/add_comment/">Write a review</a>
         </li>
         <li class="nav-item">
@@ -48,7 +51,7 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex" role="search">
+      <form action="{% url 'books:search' %}" method="GET" class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>

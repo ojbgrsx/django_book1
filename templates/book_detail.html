@@ -6,17 +6,19 @@
     <title>Detail information</title>
 </head>
 <body>
-    <h1 class="text-center">{{book_key.title}}</h1>
+    <button><a href="/book_list/{{object.id}}/update/">Edit</a></button>
+    <button><a href="/book_list/{{object.id}}/delete/">Delete</a></button>
+    <h1 class="text-center">Detail information</h1>
     <div class="row">
         <div class="col-5 gy-5">
-            <img src="{{book_key.image.url}}">
-            <p>Price: {{book_key.cost}}</p>
-            <p>{{book_key.actuality}}</p>
+            <img src="{{object.image.url}}">
+            <p>Price: {{object.cost}}</p>
+            <p>{{object.actuality}}</p>
         </div>
         <div class="col-6 gy-5">
-            <p>{{book_key.description}}</p>
+            <p>{{object.description}}</p>
             <iframe src="{{book_key.video}}" frameborder="0" width="400" height="200"></iframe>
-            <p>{{book_key.created_date}}</p>
+            <p>{{object.created_date}}</p>
         </div>
     </div>
     <table border="2">
@@ -24,7 +26,7 @@
             <th>Date of the creationg a review</th> <th>Comment</th> <th>Mark</th>
         </tr>
 
-        {% for i in book_key.review_object.all %}
+        {% for i in object.review_object.all %}
         <tr>
             <td>{{i.created_date}}</td> <td>{{i.text_review}}</td> <td>{{i.rate_stars}}</td>
         </tr>
